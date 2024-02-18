@@ -1,9 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab1Prokopchuk.Models
 {
-	class Birthday
-	{
+    class Birthday
+    {
+        #region Fields
+        private DateTime _birthday;
+        private readonly string[] zodiacSignsChinese =
+        { "rooster", "dog", "pig", "rat", "ox", "tiger",
+          "rabbit", "dragon", "snake", "horse", "sheep",
+          "monkey"
+        };
+        #endregion
+
         #region DataBDay
         public DateTime Date
         {
@@ -12,33 +25,23 @@ namespace Lab1Prokopchuk.Models
         }
         #endregion
 
-        #region Fields
-        private DateTime _birthday;
-        private readonly string[] zodiacSignsChinese = 
-        { "rooster", "dog", "pig", "rat", "ox", "tiger", 
-          "rabbit", "dragon", "snake", "horse", "sheep", 
-          "monkey" 
-        };
-        #endregion
-
         public int CountUserAge()
         {
             var currentDay = DateTime.Today;
             var userAge = currentDay.Year - _birthday.Year;
-            userAge = _birthday.Date > currentDay.AddYears(userAge * -1) ? userAge-1 : userAge;
+            userAge = _birthday.Date > currentDay.AddYears(userAge * -1) ? userAge - 1 : userAge;
             return userAge;
         }
 
         public Boolean CheckIfValidBD()
         {
             var userAge = CountUserAge();
-            if(userAge < 0) 
+            if (userAge < 0)
                 return false;
-            if(userAge > 135)
+            if (userAge > 135)
                 return false;
             return true;
         }
-
         public Boolean CheckIfBDToday()
         {
             return _birthday.Date == DateTime.Today.Date;
@@ -52,7 +55,7 @@ namespace Lab1Prokopchuk.Models
 
         public string ZodiacBasic()
         {
-            var bdayMonth  = _birthday.Month;
+            var bdayMonth = _birthday.Month;
             var bdayDay = _birthday.Day;
 
             if (bdayMonth == 1)
@@ -91,7 +94,7 @@ namespace Lab1Prokopchuk.Models
             else if (bdayMonth == 12)
                 return bdayDay < 22 ? "Sagittarius" : "Capricorn";
 
-            else 
+            else
                 return "Error";
         }
     }
