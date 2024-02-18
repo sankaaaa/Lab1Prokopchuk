@@ -5,6 +5,11 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1Prokopchuk", "Lab1Prokopchuk.csproj", "{6F082202-7210-4C9D-83EA-8A40552E8178}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{AF5918E5-8F4B-4C0A-B222-BA54CF30D7B0}"
+	ProjectSection(SolutionItems) = preProject
+		Birthday.cs = Birthday.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
