@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lab1Prokopchuk
+namespace Lab1Prokopchuk.Models
 {
 	class Birthday
 	{
