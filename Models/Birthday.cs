@@ -11,9 +11,8 @@ namespace Lab1Prokopchuk.Models
         #region Fields
         private DateTime _birthday;
         private readonly string[] zodiacSignsChinese =
-        { "rooster", "dog", "pig", "rat", "ox", "tiger",
-          "rabbit", "dragon", "snake", "horse", "sheep",
-          "monkey"
+        { "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger",
+          "Rabbit", "Dragon", "Snake", "Horse", "Sheep",
         };
         #endregion
 
