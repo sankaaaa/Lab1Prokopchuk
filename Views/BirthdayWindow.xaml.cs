@@ -1,5 +1,6 @@
 ﻿using Lab1Prokopchuk.ViewModels;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Lab1Prokopchuk.Views
@@ -25,5 +26,10 @@ namespace Lab1Prokopchuk.Views
                 _viewModel.UpdateDate = selectedDate.Value;
             }
         }
+        private void BCheckBday_Click(object sender, RoutedEventArgs e)
+        {
+            _viewModel.ChooseDate();
+        }
+
     }
 }

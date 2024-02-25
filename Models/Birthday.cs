@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab1Prokopchuk.Models
 {
@@ -14,6 +10,12 @@ namespace Lab1Prokopchuk.Models
         { "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger",
           "Rabbit", "Dragon", "Snake", "Horse", "Sheep",
         };
+
+        private readonly string[] zodiacSignsBasic =
+        { "Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer",
+          "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius",
+        };
+
         #endregion
 
         #region DataBDay
@@ -58,40 +60,40 @@ namespace Lab1Prokopchuk.Models
             var bdayDay = _birthday.Day;
 
             if (bdayMonth == 1)
-                return bdayDay < 20 ? "Capricorn" : "Aquarius";
+                return bdayDay < 20 ? zodiacSignsBasic[0] : zodiacSignsBasic[1];
 
             else if (bdayMonth == 2)
-                return bdayDay < 19 ? "Aquarius" : "Pisces";
+                return bdayDay < 19 ? zodiacSignsBasic[1] : zodiacSignsBasic[2];
 
             else if (bdayMonth == 3)
-                return bdayDay < 21 ? "Pisces" : "Aries";
+                return bdayDay < 21 ? zodiacSignsBasic[2] : zodiacSignsBasic[3];
 
             else if (bdayMonth == 4)
-                return bdayDay < 20 ? "Aries" : "Taurus";
+                return bdayDay < 20 ? zodiacSignsBasic[3] : zodiacSignsBasic[4];
 
             else if (bdayMonth == 5)
-                return bdayDay < 21 ? "Taurus" : "Gemini";
+                return bdayDay < 21 ? zodiacSignsBasic[4] : zodiacSignsBasic[5];
 
             else if (bdayMonth == 6)
-                return bdayDay < 21 ? "Gemini" : "Cancer";
+                return bdayDay < 21 ? zodiacSignsBasic[5] : zodiacSignsBasic[6];
 
             else if (bdayMonth == 7)
-                return bdayDay < 23 ? "Cancer" : "Leo";
+                return bdayDay < 23 ? zodiacSignsBasic[6] : zodiacSignsBasic[7];
 
             else if (bdayMonth == 8)
-                return bdayDay < 23 ? "Leo" : "Virgo";
+                return bdayDay < 23 ? zodiacSignsBasic[7] : zodiacSignsBasic[8];
 
             else if (bdayMonth == 9)
-                return bdayDay < 23 ? "Virgo" : "Libra";
+                return bdayDay < 23 ? zodiacSignsBasic[8] : zodiacSignsBasic[9];
 
             else if (bdayMonth == 10)
-                return bdayDay < 23 ? "Libra" : "Scorpio";
+                return bdayDay < 23 ? zodiacSignsBasic[9] : zodiacSignsBasic[10];
 
             else if (bdayMonth == 11)
-                return bdayDay < 22 ? "Scorpio" : "Sagittarius";
+                return bdayDay < 22 ? zodiacSignsBasic[10] : zodiacSignsBasic[11];
 
             else if (bdayMonth == 12)
-                return bdayDay < 22 ? "Sagittarius" : "Capricorn";
+                return bdayDay < 22 ? zodiacSignsBasic[11] : zodiacSignsBasic[0];
 
             else
                 return "Error";
